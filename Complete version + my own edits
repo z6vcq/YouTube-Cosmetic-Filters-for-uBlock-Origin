@@ -1,4 +1,4 @@
-! Title:  YouTube-Cosmetic-Filters-for-uBlock-Origin - Complete version + my own edits
+! Title:  YouTube-Cosmetic-Filters-for-uBlock-Origin - Complete version + my own edits to make it more distractions free and kid friendlier
 ! Description: Cosmetic filters to improve the search results, home section and video page.
 ! Home: https://github.com/Onsotumenh/YouTube-Cosmetic-Filters-for-uBlock-Origin
 
@@ -122,3 +122,12 @@ www.youtube.com##.ytd-two-column-browse-results-renderer.style-scope
 www.youtube.com##.ytp-show-tiles.ytp-endscreen-paginate.videowall-endscreen.ytp-player-content.html5-endscreen
 www.youtube.com##.ytp-autonav-toggle-button-container
 
+! Blocks the video suggestions at the end of the video
+www.youtube.com##.ytp-show-tiles.ytp-endscreen-paginate.videowall-endscreen.ytp-player-content.html5-endscreen
+
+! Blocks comments
+www.youtube.com###message
+
+! Blocks shorts present sometimes in the description of some videos
+www.youtube.com##.ytp-show-tiles.videowall-endscreen.ytp-player-content.html5-endscreen
+www.youtube.com###scroll-container > .yt-horizontal-list-renderer.style-scope
