@@ -1,4 +1,4 @@
-! Title:  YouTube-Cosmetic-Filters-for-uBlock-Origin - Complete version + my own edits to make it more distractions free and kid friendlier
+! Title:  YouTube-Cosmetic-Filters-for-uBlock-Origin - Complete version
 ! Description: Cosmetic filters to improve the search results, home section and video page.
 ! Home: https://github.com/Onsotumenh/YouTube-Cosmetic-Filters-for-uBlock-Origin
 
@@ -131,3 +131,36 @@ www.youtube.com###message
 ! Blocks shorts present sometimes in the description of some videos
 www.youtube.com##.ytp-show-tiles.videowall-endscreen.ytp-player-content.html5-endscreen
 www.youtube.com###scroll-container > .yt-horizontal-list-renderer.style-scope
+
+! Always on theater mode in youtube
+! Block frontpage reddit but also blocks results of searchs
+!reddit.com##main#main-content > div:not([id])
+!reddit.com##shreddit-feed
+
+! Try to block reddits homepage
+!||reddit.com/|$doc
+
+! This will block all subreddit feeds, user pages, and the homepage but it will leave everything else (post pages/wiki pages) intact. So you can find your answers through google without getting drawn in so easily.
+!^(https?|file)://((www\.)?(old\.|www\.old\.)?reddit\.com(/(r|user)/[^/]+)?/?([^/]+)?)$
+
+! Blocks frontpage of reddit, thats a doomscrolling addictive trap
+www.reddit.com##:matches-path(/^\/(\?.*)?$/) .main-container
+www.reddit.com##:matches-path(/^\/(\?.*)?$/) left-nav-top-section
+
+! Blocks reddit right side list of popular posts
+www.reddit.com##pdp-right-rail
+www.reddit.com##.pt-lg.xs\:px-0.px-md
+
+! Blocks trending part of reddit when searching
+reddit.com###reddit-trending-searches-partial-container
+
+! Blocks reddit to hide other trending popular posts in the frontpage that are very distracting
+www.reddit.com##.w-full.masthead
+
+! Removes the message in youtube that some content is restricted because of the admin
+www.youtube.com###header > .ytd-section-list-renderer.style-scope
+
+! Request theater mode when playing youtube video
+youtube.com##+js(set-attr, ytd-watch-flexy, theaterRequested, true)
+
+
