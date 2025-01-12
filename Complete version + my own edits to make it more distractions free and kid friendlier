@@ -156,4 +156,7 @@ reddit.com###reddit-trending-searches-partial-container
 ! Blocks reddit to hide other trending popular posts in the frontpage that are very distracting
 www.reddit.com##.w-full.masthead
 
+! Removes the feed of the subreddits, so reddit only shows whatecer you search and not an addivtive infinite doomscroll feed
+www.reddit.com##.xs\:gap-sm.mx-auto.m\:px-lg.xs\:px-md.m\:w-\[1120px\].w-full.order-2.flex-col.flex.box-border.m\:col-start-2.subgrid-container
+
 
